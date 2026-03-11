@@ -11,11 +11,23 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+/* ---------------- MIDDLEWARE ---------------- */
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://voyage-ai-steel.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  })
+);
+
 app.use(express.json());
 
-// Routes
+/* ---------------- ROUTES ---------------- */
+
 app.get("/", (req, res) => {
   res.send("VoyageAI backend running");
 });
@@ -24,9 +36,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/trips", tripRoutes);
 app.use("/api/ai", aiRoutes);
 
+/* ---------------- SERVER ---------------- */
+
 const PORT = process.env.PORT || 5000;
 
-// Connect DB then start server
 connectDB().then(() => {
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
