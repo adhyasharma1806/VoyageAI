@@ -121,7 +121,7 @@ export default function PlannerPage() {
       const token = localStorage.getItem("token")
 
       // AI itinerary generation – send structured trip data expected by the backend
-      const aiRes = await fetch("http://localhost:5000/api/ai/generate-trip", {
+      const aiRes = await fetch("https://voyageai-1-b0iw.onrender.com/api/ai/generate-trip", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
