@@ -94,7 +94,7 @@ export default function DashboardPage() {
 
         const token = localStorage.getItem("token")
 
-        const res = await fetch("http://localhost:5000/api/trips",{
+        const res = await fetch("https://voyageai-1-b0iw.onrender.com/api/trips",{
           headers:{
             Authorization:`Bearer ${token}`
           }
