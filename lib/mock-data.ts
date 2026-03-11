@@ -1,0 +1,131 @@
+export const mockTrips = [
+  {
+    id: '1',
+    destination: 'Paris, France',
+    startDate: '2026-06-15',
+    endDate: '2026-06-22',
+    budget: 'comfortable',
+    travelers: 2,
+    status: 'upcoming',
+    image: 'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=800',
+    days: [
+      {
+        day: 1,
+        date: '2026-06-15',
+        title: 'Arrival & Eiffel Tower',
+        activities: [
+          {
+            time: '10:00 AM',
+            title: 'Arrival at Charles de Gaulle Airport',
+            description: 'Check-in to hotel and freshen up',
+            location: 'CDG Airport',
+            duration: '2 hours',
+          },
+          {
+            time: '2:00 PM',
+            title: 'Eiffel Tower Visit',
+            description: 'Explore the iconic Eiffel Tower and enjoy panoramic views of Paris',
+            location: 'Champ de Mars, 5 Avenue Anatole France',
+            duration: '3 hours',
+          },
+          {
+            time: '7:00 PM',
+            title: 'Dinner at Le Jules Verne',
+            description: 'Fine dining experience at the Eiffel Tower restaurant',
+            location: 'Eiffel Tower',
+            duration: '2 hours',
+          },
+        ],
+      },
+      {
+        day: 2,
+        date: '2026-06-16',
+        title: 'Louvre & Notre-Dame',
+        activities: [
+          {
+            time: '9:00 AM',
+            title: 'Louvre Museum',
+            description: 'Explore world-famous artworks including the Mona Lisa',
+            location: 'Rue de Rivoli',
+            duration: '4 hours',
+          },
+          {
+            time: '2:00 PM',
+            title: 'Lunch at Café Marly',
+            description: 'Enjoy French cuisine with a view of the Louvre pyramid',
+            location: '93 Rue de Rivoli',
+            duration: '1.5 hours',
+          },
+          {
+            time: '4:00 PM',
+            title: 'Notre-Dame Cathedral',
+            description: 'Visit the historic Gothic cathedral',
+            location: '6 Parvis Notre-Dame',
+            duration: '2 hours',
+          },
+        ],
+      },
+      {
+        day: 3,
+        date: '2026-06-17',
+        title: 'Versailles Palace',
+        activities: [
+          {
+            time: '8:30 AM',
+            title: 'Train to Versailles',
+            description: 'Take the RER C train to Versailles',
+            location: 'RER Station',
+            duration: '1 hour',
+          },
+          {
+            time: '10:00 AM',
+            title: 'Palace of Versailles',
+            description: 'Explore the magnificent palace and gardens',
+            location: 'Place d\'Armes, Versailles',
+            duration: '5 hours',
+          },
+          {
+            time: '6:00 PM',
+            title: 'Return to Paris',
+            description: 'Evening at leisure',
+            location: 'Paris',
+            duration: '2 hours',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: '2',
+    destination: 'Tokyo, Japan',
+    startDate: '2026-09-10',
+    endDate: '2026-09-17',
+    budget: 'moderate',
+    travelers: 1,
+    status: 'planning',
+    image: 'https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=800',
+    days: [
+      {
+        day: 1,
+        date: '2026-09-10',
+        title: 'Arrival & Shibuya',
+        activities: [
+          {
+            time: '11:00 AM',
+            title: 'Arrival at Narita Airport',
+            description: 'Take Narita Express to Tokyo',
+            location: 'Narita Airport',
+            duration: '2 hours',
+          },
+          {
+            time: '3:00 PM',
+            title: 'Shibuya Crossing',
+            description: 'Experience the world\'s busiest intersection',
+            location: 'Shibuya',
+            duration: '2 hours',
+          },
+        ],
+      },
+    ],
+  },
+];
