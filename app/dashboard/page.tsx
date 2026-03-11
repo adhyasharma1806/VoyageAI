@@ -81,7 +81,7 @@ export default function DashboardPage() {
       router.push("/auth/signin")
     }
 
-  },[])
+  },[router])
 
 
   /* fetch trips */
@@ -94,9 +94,16 @@ export default function DashboardPage() {
 
         const token = localStorage.getItem("token")
 
+        if(!token){
+          router.push("/auth/signin")
+          return
+        }
+
         const res = await fetch("https://voyageai-1-b0iw.onrender.com/api/trips",{
+          method:"GET",
           headers:{
-            Authorization:`Bearer ${token}`
+            "Content-Type":"application/json",
+            "Authorization":`Bearer ${token}`
           }
         })
 
@@ -127,7 +134,7 @@ export default function DashboardPage() {
 
     fetchTrips()
 
-  },[])
+  },[router])
 
 
   if(!mounted) return null
